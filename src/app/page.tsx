@@ -22,7 +22,7 @@ export default async function Home() {
         <div className="container">
           <div className={styles.hero__wrapper}>
             <div className={styles.hero__content}>
-              <h1 className={styles.hero__title}>Уверенность <br /> и смелость - это в вашем стиле </h1>
+              <h1 className={styles.hero__title}>Уверенность <br /> и смелость <br /> - это в вашем стиле </h1>
               <p className={styles.hero__text}>Одежда, которая никогда не подведет и вы будете чувствовать <br /> себя в ней уверенно и комфортно</p>
             </div>
             <Button text='В каталог' href='/catalog' />
@@ -76,6 +76,7 @@ export default async function Home() {
         </div>
 
       </div>
+
     </main>
   );
 }

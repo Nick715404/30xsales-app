@@ -5,11 +5,25 @@
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 786px) {
+    flex-direction: column-reverse;
+  }
+
   .imgBox {
     width: 45%;
     overflow: hidden;
     max-height: 587px;
     border-radius: 32px;
+    
+    @media (max-width: 786px) {
+      width: 100%;
+      border-radius: 16px;
+      max-height: 348px;
+    }
+
+    @media (max-width: 490px) {
+      height: 247px;
+    }
 
     .img {
       width: 100%;
@@ -22,8 +36,14 @@
   .content {
     width: 45%;
 
+    @media (max-width: 786px) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
     .title {
       margin-bottom: 16px;
+      font-size: clamp(25px, 2.8vw, 50px);
     }
 
     .text {
@@ -49,6 +69,16 @@
   transition: all .3s ease-in-out;
   z-index: 2;
   max-width: 167px;
+
+  @media (max-width: 786px) {
+    padding: 0% 6%;
+    max-width: 35%;
+    width: 100%;
+  }
+
+  @media (max-width: 490px) {
+    max-width: 60%;
+  }
 
   &:hover {
     background-color: $blue;

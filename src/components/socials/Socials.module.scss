@@ -1,6 +1,11 @@
 @import '../../styles/vars.scss';
 
 .socials {
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
   .list {
     display: flex;
     align-content: center;

@@ -6,6 +6,7 @@ import Button from '../button/Button';
 import { IBrand } from '@/interfaces/interfaces';
 import { brands } from '@/constans/constants';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Banner() {
 
@@ -45,6 +46,7 @@ export default function Banner() {
           <div className={styles.btn_box}>
             <Button text='Подробнее о бренде' href='#' />
           </div>
+          <Link className={styles.link} href='#'></Link>
         </div>
       ))}
     </div>

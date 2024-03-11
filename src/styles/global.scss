@@ -11,13 +11,27 @@
   height: 100%;
   margin: 0 auto;
   padding: 0 30px;
+
+  @media (max-width: 1024px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 786px) {
+    padding: 0 15px;
+  }
+
 }
 
 .container-small {
-  max-width: 1202px;
+  max-width: 1500px;
   width: 95%;
   margin: 0 auto;
   height: 100%;
+
+  @media (max-width: 1490px) {
+    max-width: 1200px;
+  }
+
 }
 
 .mobile-menu__container {
@@ -36,7 +50,8 @@ main {
   flex-grow: 1;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -46,11 +61,35 @@ body {
   font-size: $text-fs;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-size: $title-fs;
   font-family: $grandisExtended;
   font-weight: 600;
   letter-spacing: -1px;
   line-height: 0.9;
   text-transform: uppercase;
+}
+
+h2 {
+  font-size: $title-h2;
+}
+
+#enix {
+  @media (max-width: 1024px) {
+   background-image: url('/png/enix.png'); 
+  }
+}
+
+#equilica {
+  @media (max-width: 1024px) {
+    background-image: url('/png/equilica.png'); 
+   }
+}
+
+#achivers {
+  @media (max-width: 1024px) {
+    background-image: url('/png/achivers.png'); 
+   }
 }

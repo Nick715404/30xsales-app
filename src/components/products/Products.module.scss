@@ -5,4 +5,14 @@
   grid-row-gap: 30px;
 
   margin-bottom: 50px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 38px;
+  }
+
+  @media (max-width: 786px) {
+    grid-column-gap: 10px;
+  }
+
 }

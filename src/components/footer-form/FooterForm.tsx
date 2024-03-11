@@ -6,7 +6,19 @@ export default function FooterForm() {
   return (
     <div className={styles.form}>
       <ContactForm />
-      <img className={styles.img} src="/png/form-contact-girl.png" alt='Свяжитесь с 30XSales' />
+      <picture>
+        <source
+          srcSet='/png/form-contact-girl-786.png'
+          media="(max-width: 786px)" />
+        <source
+          srcSet='/png/form-contact-girl-1024.png'
+          media="(max-width: 1024px)" />
+        <img
+          className={styles.img}
+          src="/png/form-contact-girl.png"
+          alt='Свяжитесь с 30XSales' />
+      </picture>
+
     </div>
   )
 }

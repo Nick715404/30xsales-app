@@ -79,6 +79,7 @@
 
   .nav {
 
+    position: relative;
     margin-bottom: 60px;
     padding-top: 42px;
 
@@ -86,15 +87,54 @@
       display: flex;
       align-items: flex-start;
 
+      @media (max-width: 1024px) {
+        justify-content: space-between;
+      }
+
+      @media (max-width: 786px) {
+        flex-direction: column;
+      }
+
       .info {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         width: 45%;
+
+        @media (max-width: 1024px) {
+          flex-direction: row-reverse;
+        }
+
+        @media (max-width: 786px) {
+          justify-content: space-between;
+          width: 90%;
+        }
+
+        .menu {
+          .item {
+            @media (max-width: 1024px) {
+
+              &:nth-child(4),
+              &:last-child {
+                display: none;
+              }
+            }
+
+          }
+        }
+
       }
 
       .content {
         width: 50%;
+
+        @media (max-width: 786px) {
+          width: 100%;
+          padding-bottom: 40px;
+          border-bottom: 1px solid #DDDDDD;
+          margin-bottom: 36px;
+        }
+
       }
 
     }
@@ -110,6 +150,12 @@
       border-radius: 16px;
       padding: 24px 32px;
 
+      @media (max-width: 786px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
       .text {
         color: #fff;
         font-size: 14px;
@@ -121,7 +167,12 @@
   }
 
   .form {
-    margin-bottom: 81px;
+    margin-bottom: 80px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
   }
 
   .up {
@@ -136,6 +187,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointe;
+
+    @media (max-width: 1024px) {
+      bottom: 0;
+      right: 0;
+    }
 
     img {
       pointer-events: none;

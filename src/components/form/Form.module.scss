@@ -1,13 +1,27 @@
 .form {
 
   max-width: 560px;
-  width: 100%;
+  width: 52%;
   color: #D4D4D4;
+
+  @media (max-width: 1024px) {
+    width: 48%;
+  }
+
+  @media (max-width: 786px) {
+    width: 100%;
+    max-width: unset;
+  }
 
   .title {
     color: #fff;
-    font-size: clamp(25px, 3.7vw, 40px);
+    font-size: clamp(25px, 2vw, 40px);
     margin-bottom: 20px;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 10px;
+    }
+
   }
 
   .text {
@@ -16,6 +30,14 @@
     font-family: 'Manrope', sans-serif;
     color: #fff;
     margin-bottom: 22px;
+
+    @media (max-width: 1024px) {
+      br {
+        display: none;
+      }
+      margin-bottom: 30px;
+    }
+
   }
 
   .row {
@@ -24,8 +46,19 @@
     gap: 24px;
     margin-bottom: 24px;
 
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
     .inputBox {
       width: 50%;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+
     }
 
   }
@@ -68,6 +101,11 @@
     font-size: 14px;
     margin-bottom: 24px;
 
+    @media (max-width: 1024px) {
+      margin-bottom: 15px;
+      min-height: 110px;
+    }
+
     &::placeholder {
       color: #D4D4D4;
       font-family: 'Manrope', sans-serif;
@@ -99,6 +137,10 @@
     color: #D4D4D4;
     display: flex;
     gap: 12px;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 30px;
+    }
 
     label {
       margin: 0;

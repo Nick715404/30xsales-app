@@ -67,6 +67,9 @@ export default function Footer() {
               </div>
             </div>
           </div>
+          <Link className={styles.up} href='#home-hero'>
+            <img src="/svg/arrow-up.svg" alt="" />
+          </Link>
         </div>
         <div className={styles.copy}>
           <div className={styles.wrapper}>
@@ -74,9 +77,6 @@ export default function Footer() {
             <Link href='#' className={styles.text}>Политика конфиденциальности</Link>
           </div>
         </div>
-        <Link className={styles.up} href='#home-hero'>
-          <img src="/svg/arrow-up.svg" alt="" />
-        </Link>
       </div>
     </footer>
   )

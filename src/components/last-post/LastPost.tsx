@@ -31,7 +31,7 @@ export default function LastPost({ data }: Props) {
           </div>
           <div className={styles.content}>
             <h2 className={styles.title}>{post.title}</h2>
-            <p className={styles.text}>{post.subTitle}</p>
+            <p className={styles.text}>{post.subTitle.slice(0, 200)}</p>
             <Link className={styles.btn} href={`/blog/${post.id}`}>
               <span className={styles.linkText}>Подробнее</span>
               <Image className={styles.arrow} src={arrow} alt='' />
