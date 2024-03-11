@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1578px;
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.container-small {
+  max-width: 1202px;
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.mobile-menu__container {
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+body {
+  font-family: $manrope;
+  font-weight: 400;
+  font-size: $text-fs;
+}
+
+h1, h2 {
+  font-size: $title-fs;
+  font-family: $grandisExtended;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 0.9;
+  text-transform: uppercase;
+}

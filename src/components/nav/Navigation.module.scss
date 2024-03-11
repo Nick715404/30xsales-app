@@ -1,0 +1,30 @@
+@import '@/styles/vars.scss';
+
+.nav {
+
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 47px;
+
+    @media (max-width: 1024px) {
+      gap: 25px;
+    }
+
+    .link {
+      color: $dark;
+      text-decoration: none;
+      font-weight: 400;
+      transition: all .4s ease-in-out;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+}
+
+.active {
+  color: $blue;
+  text-decoration: none;
+}

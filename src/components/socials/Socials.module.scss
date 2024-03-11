@@ -1,0 +1,21 @@
+@import '../../styles/vars.scss';
+
+.socials {
+  .list {
+    display: flex;
+    align-content: center;
+    gap: 10px;
+  }
+
+  .link {
+    height: 100%;
+    display: block;
+  }
+
+  .img {
+    transition: all .4s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.logo {
+  position: relative;
+  z-index: 9999;
+
+  .img {
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+
+  .link {
+    display: block;
+    height: 100%;
+  }
+}
