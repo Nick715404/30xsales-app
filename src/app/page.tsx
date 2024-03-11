@@ -5,10 +5,15 @@ import Image from 'next/image';
 import Button from '@/components/button/Button';
 import Banner from '@/components/banner/Banner';
 import Catalog from '@/components/catalog/Catalog';
+import LastPost from '@/components/last-post/LastPost';
 
 import aboutImg from '/public/png/about.png';
+import Posts from '@/components/posts/Posts';
+import { getAllPostsFX } from '@/api/posts/posts';
 
-export default function Home() {
+export default async function Home() {
+
+  const posts = await getAllPostsFX();
 
   return (
     <main id='home'>
@@ -53,6 +58,22 @@ export default function Home() {
             <Catalog />
           </div>
         </section>
+
+        <div className={styles.black_box}>
+
+          <section id='home-last-post' className={styles.lastPost}>
+            <div className="container">
+              <LastPost data={posts} />
+            </div>
+          </section>
+
+          <section id='home-blog' className={styles.blog}>
+            <div className="container">
+              <Posts data={posts} />
+            </div>
+          </section>
+
+        </div>
 
       </div>
     </main>

@@ -1,0 +1,12 @@
+.posts {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .title {
+    margin-bottom: 44px;
+  }
+
+}

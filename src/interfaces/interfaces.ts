@@ -39,3 +39,12 @@ export interface IFilterTag {
   value: string
   label: string
 }
+
+export interface IPost {
+  id: string
+  title: string
+  subTitle: string
+  body: string
+  imgPath?: string
+  thumbnailPath?: string
+}

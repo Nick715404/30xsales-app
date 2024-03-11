@@ -7,13 +7,14 @@ import arrow from '/public/svg/white-arrow.svg'
 
 type Props = {
   text: string,
-  href: string
+  href: string,
+  style?: any
 }
 
-export default function Button({ text, href }: Props) {
+export default function Button({ text, href, style }: Props) {
 
   return (
-    <Link className={styles.btn} href={`${href}`}>
+    <Link style={style} className={styles.btn} href={`${href}`}>
       <span className={styles.text}>{text}</span>
       <Image className={styles.arrow} src={arrow} alt='' />
     </Link>

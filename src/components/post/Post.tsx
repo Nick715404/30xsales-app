@@ -1,0 +1,33 @@
+import Link from 'next/link';
+import styles from './Post.module.scss';
+import { IPost } from '@/interfaces/interfaces';
+
+type Props = {
+  post: IPost
+}
+
+export default function Post({ post }: Props) {
+
+  const path = `http://localhost:3100/images/${post.thumbnailPath}`;
+
+  const textCut = () => {
+    return post.body.slice(0, 150);
+  }
+
+  return (
+    <article className={styles.post}>
+      <Link className={styles.link} href={`/blog/${post.id}`}>
+        <div className={styles.imgBox}>
+          <img className={styles.img} src={post.thumbnailPath} alt={post.title} />
+        </div>
+        <div className={styles.content}>
+          <h3 className={styles.title}>{post.title}</h3>
+          <p className={styles.subTitle}>{`${textCut()}...`}</p>
+        </div>
+        <div className={styles.toPost}>
+          <span>Подробнее</span>
+        </div>
+      </Link>
+    </article>
+  )
+}
