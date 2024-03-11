@@ -4,22 +4,22 @@ export default function ContactForm() {
   return (
     <form className={styles.form}>
       <h2 className={styles.title}>Связаться с нами</h2>
-      <p className={styles.text}>Заполните форму ниже, оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+      <p className={styles.text}>Заполните форму ниже, оставьте заявку и мы свяжемся с вами<br /> в ближайшее время</p>
       <div className={styles.row}>
         <div className={styles.inputBox}>
           <label htmlFor="name">Имя</label>
-          <input type="text" name="name" id="name" />
+          <input placeholder='Введите ваше имя' type="text" name="name" id="name" />
         </div>
         <div className={styles.inputBox}>
           <label htmlFor="mail">Email</label>
-          <input type="email" name="mail" id="mail" />
+          <input placeholder='Введите ваш Email' type="email" name="mail" id="mail" />
         </div>
       </div>
       <div className={styles.inputBox}>
-        <label htmlFor="desctription">Комментарий</label>
-        <textarea name="desctription" id="desctription" />
+        <label htmlFor="description">Комментарий</label>
+        <textarea placeholder='Ваш комментарий' name="description" id="description" />
       </div>
-      <div className={styles.inputBox}>
+      <div className={styles.checkBox}>
         <input type="checkbox" name="iAgree" id="iAgree" />
         <label htmlFor="iAgree">Я принимаю</label>
       </div>
