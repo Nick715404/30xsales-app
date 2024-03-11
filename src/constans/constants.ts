@@ -65,3 +65,26 @@ export const filterTags = [
     value: 'termo'
   },
 ]
+
+export const footerSocials = [
+  {
+    label: 'facebook',
+    href: 'https://www.facebook.com/',
+    imgPath: '/svg/facebook-black.svg'
+  },
+  {
+    label: 'twitter',
+    href: 'https://www.twitter.com/',
+    imgPath: '/svg/twitter-black.svg'
+  },
+  {
+    label: 'youtube',
+    href: 'https://www.youtube.com/',
+    imgPath: '/svg/youtube.svg'
+  },
+  {
+    label: 'instagramm',
+    href: 'https://www.instagramm.com/',
+    imgPath: '/svg/inst.svg'
+  },
+]

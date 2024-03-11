@@ -1,4 +1,146 @@
 .footer {
-  background-color: #312DFF;
-  padding: 5%;
+
+  margin-bottom: 40px;
+  position: relative;
+
+  .container {
+    height: auto;
+  }
+
+  .socials {
+
+    margin-top: 32px;
+
+    .list {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .link {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1px solid #E8E8E8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+    }
+  }
+
+  .menu {
+
+    .list {
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .title {
+        font-size: 18px;
+      }
+
+      .link {
+        font-size: 14px;
+        color: #565656;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  .contacts {
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .title {
+        font-size: 18px;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .link {
+        text-decoration: none;
+        color: #565656;
+        font-size: 14px;
+      }
+
+    }
+
+  }
+
+  .nav {
+
+    margin-bottom: 60px;
+    padding-top: 42px;
+
+    .wrapper {
+      display: flex;
+      align-items: flex-start;
+
+      .info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 45%;
+      }
+
+      .content {
+        width: 50%;
+      }
+
+    }
+
+  }
+
+  .copy {
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      background-color: #1E1E1E;
+      border-radius: 16px;
+      padding: 24px 32px;
+
+      .text {
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+  .form {
+    margin-bottom: 81px;
+  }
+
+  .up {
+    position: absolute;
+    background-color: #312DFF;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    bottom: 103px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointe;
+
+    img {
+      pointer-events: none;
+    }
+
+  }
+
 }
