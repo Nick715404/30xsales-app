@@ -1,5 +1,11 @@
+import styles from './Footer.module.scss';
+
+import ContactForm from "../form/ContactForm"
+
 export default function Footer() {
   return (
-    <footer>Footer</footer>
+    <footer className={styles.footer}>
+      <ContactForm />
+    </footer>
   )
 }
