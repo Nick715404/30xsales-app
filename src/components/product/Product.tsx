@@ -18,7 +18,7 @@ export default function Product({ product }: Props) {
       href={`/catalog/${product.id}`}>
       <div className={styles.imgbox}>
         <img className={styles.img}
-          src={path}
+          src={product.thumbnailPath}
           alt={product.title} />
       </div>
       <h3 className={styles.title}>{product.title}</h3>

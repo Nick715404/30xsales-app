@@ -5,16 +5,33 @@
 
     text-decoration: none;
 
+    &:hover {
+      .img {
+        transform: scale(1.1);
+      }
+
+      .title {
+        color: #312DFF;
+      }
+
+      span {
+        text-decoration: underline;
+      }
+
+    }
+
     .imgBox {
       overflow: hidden;
       border-radius: 16px;
       margin-bottom: 24px;
       max-height: 388px;
+      height: 100%;
 
       .img {
         object-fit: cover;
         width: 100%;
         height: 100%;
+        transition: all .3s ease-in-out;
       }
 
     }
@@ -23,6 +40,7 @@
       font-size: clamp(20px, 3.7vw, 25px);
       color: #fff;
       line-height: 1.05;
+      transition: all .3s ease-in-out;
     }
 
     .subTitle {
@@ -32,6 +50,7 @@
     }
 
     .toPost {
+
       span {
         color: #FDFDFD;
         font-size: 14px;
