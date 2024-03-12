@@ -15,7 +15,7 @@ export default function FooterForm() {
           media="(max-width: 1024px)" />
         <img
           className={styles.img}
-          src="/png/form-contact-girl.png"
+          src="/png/form-contact-bg.png"
           alt='Свяжитесь с 30XSales' />
       </picture>
 
