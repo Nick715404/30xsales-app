@@ -10,7 +10,6 @@ export default function Catalog() {
       <h2 className={styles.title}>каталог</h2>
       <Filter />
       <Products />
-      <Link className={styles.link} href={'/'}>в каталог</Link>
     </div>
   )
 }

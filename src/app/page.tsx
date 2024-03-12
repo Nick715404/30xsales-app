@@ -11,6 +11,7 @@ import aboutImg from '/public/png/about.png';
 import Posts from '@/components/posts/Posts';
 import { getAllPostsFX } from '@/api/posts/posts';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "30XSales || Главная",
@@ -61,6 +62,7 @@ export default async function Home() {
         <section id='home-catalog' className={styles.catalog}>
           <div className="container">
             <Catalog />
+            <Link className={styles.linkCatalog} href={'/catalog'}>в каталог</Link>
           </div>
         </section>
 
@@ -81,7 +83,7 @@ export default async function Home() {
         </div>
 
       </div>
-      
+
     </div>
   );
 }

@@ -1,11 +1,17 @@
 import styles from './page.module.scss';
 
-export default function Catalog() {
+import Catalog from '@/components/catalog/Catalog';
+
+export default function CatalogPage() {
   return (
     <div className='catalog'>
-
-    awdawdawd
-
+      <div className={styles.whiteBox}>
+        <section className={styles.catalog}>
+          <div className="container">
+            <Catalog />
+          </div>
+        </section>
+      </div>
     </div>
   )
 }
