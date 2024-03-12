@@ -88,3 +88,18 @@ export const footerSocials = [
     imgPath: '/svg/inst.svg'
   },
 ]
+
+export const tabs = [
+  {
+    text: 'Эффективно управлять продажами',
+    img: '/svg/tabs/sales.svg',
+  },
+  {
+    text: 'Создавать инновационные бренды одежды  ',
+    img: '/svg/tabs/idea.svg',
+  },
+  {
+    text: 'Успешно взаимодействовать с маркетплейсами ',
+    img: '/svg/tabs/comunity.svg',
+  },
+]

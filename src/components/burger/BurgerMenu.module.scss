@@ -1,6 +1,7 @@
 @import '../../styles/vars.scss';
 
-.mobile_menu {
+.mobile_menu,
+.filtered {
   @media (min-width: 1024px) {
     display: none;
   }
@@ -260,6 +261,18 @@
       &:hover {
         transform: scale(1.1);
       }
+    }
+  }
+}
+
+.filtered {
+  .burger {
+
+    border: 1px solid $white;
+
+    &__line {
+      background-color: $white;
+      mix-blend-mode: difference;
     }
   }
 }

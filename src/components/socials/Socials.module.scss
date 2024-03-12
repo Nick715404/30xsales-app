@@ -1,6 +1,7 @@
 @import '../../styles/vars.scss';
 
-.socials {
+.socials,
+.filtered {
 
   @media (max-width: 1024px) {
     display: none;
@@ -23,4 +24,12 @@
       transform: scale(1.1);
     }
   }
+}
+
+.filtered {
+
+  .img {
+    filter: invert(100%);
+  }
+
 }

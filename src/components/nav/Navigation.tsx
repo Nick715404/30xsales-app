@@ -12,7 +12,9 @@ export default function Navigation() {
   const pathName = usePathname();
 
   return (
-    <nav className={styles.nav}>
+    <nav
+      className={
+        pathName != '/' ? styles.filter : styles.nav}>
       <ul className={styles.list}>
         {navLinks.map((link: INavLink) => {
           const isActive = pathName === link.href;

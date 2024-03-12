@@ -48,3 +48,8 @@ export interface IPost {
   imgPath?: string
   thumbnailPath?: string
 }
+
+export interface ITabs {
+  text: string
+  img: string
+}

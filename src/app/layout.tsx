@@ -1,13 +1,12 @@
 import '../styles/styles.scss';
 
-import type { Metadata } from "next";
+import { Metadata } from 'next';
 
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 
 export const metadata: Metadata = {
-  title: "30XSales || Интернет каталог товаров с AliExptress",
-  description: "30XSales - интернет магазин для нее",
+  description: "30XSales - интернет магазин для нее и для них",
   icons: {
     icon: '/icon.ico',
   },

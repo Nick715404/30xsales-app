@@ -67,7 +67,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <Link className={styles.up} href='#home-hero'>
+          <Link className={styles.up} href='#hero'>
             <img src="/svg/arrow-up.svg" alt="" />
           </Link>
         </div>

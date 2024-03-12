@@ -1,6 +1,7 @@
 @import '@/styles/vars.scss';
 
-.nav {
+.nav,
+.filter {
 
   .list {
     display: flex;
@@ -28,3 +29,16 @@
   color: $blue;
   text-decoration: none;
 }
+
+.filter {
+  .link {
+    color: #fff !important;
+    opacity: 0.6;
+  }
+
+  .active {
+    opacity: 1;
+    color: #fff !important;
+  }
+
+} 

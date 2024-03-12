@@ -10,15 +10,20 @@ import LastPost from '@/components/last-post/LastPost';
 import aboutImg from '/public/png/about.png';
 import Posts from '@/components/posts/Posts';
 import { getAllPostsFX } from '@/api/posts/posts';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "30XSales || Главная",
+};
 
 export default async function Home() {
 
   const posts = await getAllPostsFX();
 
   return (
-    <main id='home'>
+    <div className='home'>
 
-      <section id='home-hero' className={styles.hero}>
+      <section id='hero' className={styles.hero}>
         <div className="container">
           <div className={styles.hero__wrapper}>
             <div className={styles.hero__content}>
@@ -76,7 +81,7 @@ export default async function Home() {
         </div>
 
       </div>
-
-    </main>
+      
+    </div>
   );
 }

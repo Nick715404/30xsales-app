@@ -5,10 +5,10 @@ import styles from './BurgerMenu.module.scss';
 import { useState } from 'react';
 import { navLinks } from '@/constans/constants';
 import { usePathname } from 'next/navigation';
+import { ISocialsImages } from '@/interfaces/interfaces';
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ISocialsImages } from '@/interfaces/interfaces';
 import Facebook from '/public/svg/facebook-black.svg';
 import Instagramm from '/public/svg/inst.svg';
 import Youtube from '/public/svg/youtube.svg';
@@ -28,9 +28,17 @@ export default function BurgerMenu() {
     default: ''
   };
 
+  const handleStyleChange = () => {
+    if (pathName != '/' && pathName != '/contacts' && pathName != '/post') {
+      return styles.filtered;
+    } else {
+      return styles.mobile_menu
+    }
+  }
+
   return (
     <>
-      <div className={styles.mobile_menu}>
+      <div className={handleStyleChange()}>
         <div
           className={`${styles.burger} ${openMenu ? styles.open : ''}`}
           onClick={(): void => setOpenMenu(!openMenu)}>

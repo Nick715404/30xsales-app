@@ -1,7 +1,11 @@
-type Props = {}
+import styles from './page.module.scss';
 
-export default function Catalog({}: Props) {
+export default function Catalog() {
   return (
-    <div>Catalog</div>
+    <div className='catalog'>
+
+    awdawdawd
+
+    </div>
   )
 }

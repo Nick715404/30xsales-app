@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './Socials.module.scss';
 
 import Image from 'next/image';
@@ -8,18 +10,28 @@ import Instagramm from '/public/svg/inst.svg';
 import Youtube from '/public/svg/youtube.svg';
 
 import { ISocialsImages } from '@/interfaces/interfaces';
+import { usePathname } from 'next/navigation';
 
-type Props = {}
+export default function Socials() {
 
-export default function Socials({ }: Props) {
+  const pathUrl = usePathname();
+
   const images: ISocialsImages = {
     facebook: Facebook,
     inst: Instagramm,
     youtube: Youtube
   }
 
+  const handleStyleChange = () => {
+    if (pathUrl != '/' && pathUrl != '/contacts' && pathUrl != '/post') {
+      return styles.filtered;
+    } else {
+      return styles.socials
+    }
+  }
+
   return (
-    <div className={styles.socials}>
+    <div className={handleStyleChange()}>
       <ul className={styles.list}>
         <li className={styles.item}>
           <Link className={styles.link} href={'/'}>
