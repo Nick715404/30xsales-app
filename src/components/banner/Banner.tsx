@@ -40,8 +40,7 @@ export default function Banner() {
           id={id}
           onMouseEnter={() => handleMouseEnter(id as BrandKeys)}
           onMouseLeave={handleMouseLeave}
-          className={styles.column}
-        >
+          className={styles.column}>
           <h2 className={styles.title}>{name}</h2>
           <p className={styles.text}>{description}</p>
           <div className={styles.btn_box}>
@@ -51,11 +50,8 @@ export default function Banner() {
         </div>
       ))}
       {hoveredBrand && (
-        <Image
-          fill
-          src={brandImages[hoveredBrand]}
-          alt={hoveredBrand}
-          priority
+        <Image fill src={brandImages[hoveredBrand]}
+          alt={hoveredBrand} priority
         />
       )}
     </div>

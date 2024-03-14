@@ -15,9 +15,9 @@ export default function Posts({ data, filtered, title, color }: Props) {
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.grid}>
         {filtered ? data && data.map((post: any) => (
-          <Post key={post.id} post={post} />
+          <Post color={color} key={post.id} post={post} />
         )).slice(0, 3) : data && data.map((post: any) => (
-          <Post key={post.id} post={post} />
+          <Post color={color} key={post.id} post={post} />
         ))}
       </div>
     </div>

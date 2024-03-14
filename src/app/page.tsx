@@ -1,18 +1,16 @@
 import styles from './page.module.scss';
 
+import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
+import { getAllPosts } from '@/api/posts/posts';
 
+import aboutImg from '/public/png/about.png';
 import Button from '@/components/button/Button';
 import Banner from '@/components/banner/Banner';
 import Catalog from '@/components/catalog/Catalog';
 import LastPost from '@/components/last-post/LastPost';
-
-import aboutImg from '/public/png/about.png';
 import Posts from '@/components/posts/Posts';
-import { getAllPosts } from '@/api/posts/posts';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import Header from '@/components/header/Header';
 
 export const metadata: Metadata = {
   title: "30XSales || Главная",

@@ -15,11 +15,11 @@
       }
 
       .title {
-        color: #312DFF;
+        color: #312DFF !important;
       }
 
       span {
-        text-decoration: underline;
+        text-decoration: underline !important;
       }
 
     }
@@ -45,10 +45,11 @@
     }
 
     .title {
-      font-size: clamp(20px, 2.2vw, 25px);
+      font-size: clamp(20px, 1.8vw, 25px);
       color: #fff;
       line-height: 1.05;
       transition: all .3s ease-in-out;
+      margin-bottom: 8px;
     }
 
     .subTitle {

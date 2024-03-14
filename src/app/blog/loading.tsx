@@ -1,5 +1,12 @@
 export default function LoadingPosts() {
   return (
-    <h1 style={{ color: '#fff' }}>Loading...</h1>
+    <div style={{
+      height: '500px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}>
+      <h1 style={{ color: '#000' }}>Загружаю данные...</h1>
+    </div>
   )
 }

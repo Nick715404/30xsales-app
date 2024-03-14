@@ -1,8 +1,14 @@
 import styles from './page.module.scss';
 
 import { getAllPosts } from "@/api/posts/posts"
+import { Metadata } from 'next';
+
 import LastPost from "@/components/last-post/LastPost"
 import Posts from '@/components/posts/Posts';
+
+export const metadata: Metadata = {
+  title: "30XSales || Блог",
+};
 
 export default async function Blog() {
 
@@ -20,10 +26,11 @@ export default async function Blog() {
       <section className={styles.news}>
         <div className="container-small">
           <Posts
+            color='#010101'
             filtered={false}
             data={posts}
             title='Все новости'
-             />
+          />
         </div>
       </section>
 

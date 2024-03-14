@@ -11,6 +11,7 @@ export const getAllPosts = async () => {
 export const getCurrentPost = async (id: string) => {
   try {
     const responce = await fetch(`http://localhost:3100/api/post/${id}`);
+    console.log(responce);
     return responce.json();
   }
   catch (error) {

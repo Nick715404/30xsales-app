@@ -3,10 +3,11 @@ import styles from './Post.module.scss';
 import { IPost } from '@/interfaces/interfaces';
 
 type Props = {
-  post: IPost
+  post: IPost,
+  color?: string
 }
 
-export default function Post({ post }: Props) {
+export default function Post({ post, color }: Props) {
 
   const path = `http://localhost:3100/images/${post.thumbnailPath}`;
 
@@ -21,7 +22,7 @@ export default function Post({ post }: Props) {
           <img className={styles.img} src={post.thumbnailPath} alt={post.title} />
         </div>
         <div className={styles.content}>
-          <h3 className={styles.title}>{post.title}</h3>
+          <h3 style={{ color: `${color}` }} className={styles.title}>{post.title}</h3>
           <p className={styles.subTitle}>{`${textCut()}...`}</p>
         </div>
         <div className={styles.toPost}>
