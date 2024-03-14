@@ -103,3 +103,9 @@ export const tabs = [
     img: '/svg/tabs/comunity.svg',
   },
 ]
+
+export const urlPaths = {
+  home: '/',
+  post: '/blog/*',
+  contacts: '/contacts'
+}

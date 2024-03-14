@@ -3,8 +3,9 @@ import styles from './Footer.module.scss';
 import { footerSocials, navLinks } from '@/constans/constants';
 
 import Link from 'next/link';
-import Logo from '../logo/Logo';
 import FooterForm from '../footer-form/FooterForm';
+import Image from 'next/image';
+import logoImg from '/public/svg/30XSales.svg'
 
 export default function Footer() {
   return (
@@ -19,9 +20,21 @@ export default function Footer() {
           <div className="container-small">
             <div className={styles.wrapper}>
               <div className={styles.content}>
-                <Logo mode={false} />
-                <div className={styles.socials}>
 
+                <div className={styles.logoBox}>
+                  <div className={`${styles.logo}`}>
+                    <Link className={styles.link} href={'/'}>
+                      <Image
+                        className={styles.img}
+                        src={logoImg}
+                        alt='Логотип 30XSales'
+                        priority
+                      />
+                    </Link>
+                  </div>
+                </div>
+
+                <div className={styles.socials}>
                   <ul className={styles.list}>
                     {footerSocials.map(item => (
                       <li key={item.label} className={styles.item}>
@@ -33,6 +46,7 @@ export default function Footer() {
                   </ul>
 
                 </div>
+
               </div>
               <div className={styles.info}>
                 <div className={styles.menu}>
