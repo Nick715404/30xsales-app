@@ -8,6 +8,7 @@
   .link {
 
     text-decoration: none;
+    display: block;
 
     &:hover {
       .img {
@@ -28,8 +29,7 @@
       overflow: hidden;
       border-radius: 16px;
       margin-bottom: 24px;
-      max-height: 388px;
-      height: 65%;
+      aspect-ratio: 1 / 1;
 
       @media (max-width: 490px) {
         max-height: 236px;

@@ -26,7 +26,7 @@ export default function Post({ post, color }: Props) {
           <p className={styles.subTitle}>{`${textCut()}...`}</p>
         </div>
         <div className={styles.toPost}>
-          <span>Подробнее</span>
+          <span style={{ color: `${color}` }}>Подробнее</span>
         </div>
       </Link>
     </article>

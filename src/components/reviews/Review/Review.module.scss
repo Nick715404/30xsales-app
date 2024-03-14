@@ -5,6 +5,10 @@
   max-width: 400px;
   min-height: 212px;
 
+  @media (max-width: 786px) {
+    max-width: unset;
+  }
+
   .rating {
     margin-bottom: 15px;
   }

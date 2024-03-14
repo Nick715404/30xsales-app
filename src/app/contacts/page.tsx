@@ -40,7 +40,7 @@ export default function Contacts() {
 
             </div>
             <div className={styles.form}>
-              <ContactForm />
+              <ContactForm mode />
             </div>
           </div>
         </div>

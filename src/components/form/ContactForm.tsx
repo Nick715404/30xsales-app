@@ -1,6 +1,10 @@
 import styles from './Form.module.scss';
 
-export default function ContactForm() {
+type Props = {
+  mode?: boolean
+}
+
+export default function ContactForm({ mode }: Props) {
   return (
     <form className={styles.form}>
       <h2 className={styles.title}>Связаться с нами</h2>
@@ -24,7 +28,7 @@ export default function ContactForm() {
         <label htmlFor="iAgree">Я принимаю</label>
       </div>
       <div className={styles.inputBox}>
-        <button className={styles.btn} type="submit">Отправить</button>
+        {mode ? <button data-color="white" className={styles.btn} type="submit">Отправить</button> : <button className={styles.btn} type="submit">Отправить</button>}
       </div>
     </form>
   )

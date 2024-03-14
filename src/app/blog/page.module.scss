@@ -5,4 +5,18 @@
   padding-bottom: 110px;
   color: #fff;
   margin-bottom: 80px;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 39px;
+  }
+
+  @media (max-width: 786px) {
+    padding-bottom: 55px;
+    border-radius: 0 0 30px 30px;
+  }
+
+}
+
+.news {
+  margin-bottom: 100px;
 }

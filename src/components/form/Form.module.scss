@@ -35,6 +35,7 @@
       br {
         display: none;
       }
+
       margin-bottom: 30px;
     }
 
@@ -209,4 +210,16 @@
     }
 
   }
+
+  button[data-color="white"] {
+    background-color: #fff;
+    color: #010101;
+
+    &:hover {
+      background-color: #312DFF;
+      color: #fff;
+    }
+
+  }
+
 }
