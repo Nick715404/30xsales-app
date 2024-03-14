@@ -50,6 +50,7 @@ export interface IPost {
 }
 
 export interface ITabs {
+  id: number
   text: string
   img: string
 }

@@ -5,9 +5,15 @@ export const handlerClassName = (styles: any) => {
   return () => {
     const path: any = usePathname();
 
-    if (![urlPaths.contacts, urlPaths.home, urlPaths.post].includes(path)) {
+    if (path.startsWith(urlPaths.post)) {
+      return styles.default;
+    }
+
+    else if (![urlPaths.contacts, urlPaths.home].includes(path)) {
       return styles.filter;
-    } else {
+    }
+
+    else {
       return styles.default;
     }
   };

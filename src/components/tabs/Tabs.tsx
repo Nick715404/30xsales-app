@@ -6,7 +6,7 @@ export default function Tabs() {
   return (
     <>
       {tabs.map((tab: ITabs) => (
-        <div className={styles.tab}>
+        <div key={tab.id} className={styles.tab}>
           <img className={styles.img} src={tab.img} alt='' />
           <span className={styles.text}>{tab.text}</span>
         </div>

@@ -35,6 +35,11 @@
   .link {
     color: #fff !important;
     opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+
   }
 
   .active {

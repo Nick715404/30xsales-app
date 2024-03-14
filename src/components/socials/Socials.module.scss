@@ -20,16 +20,16 @@
 
   .img {
     transition: all .4s ease-in-out;
+
     &:hover {
       transform: scale(1.1);
     }
   }
 }
 
-.filtered {
-
+.filter {
   .img {
-    filter: invert(100%);
+    filter: invert(100%) !important;
   }
 
 }

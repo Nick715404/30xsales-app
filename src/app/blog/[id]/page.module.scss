@@ -1,9 +1,14 @@
 .post {
   margin: 180px 0 100px 0;
 
+  @media (max-width: 1024px) {
+    margin-top: 90px;
+  }
+
   .postHeader {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     gap: 88px;
     margin-bottom: 50px;
 
@@ -17,6 +22,18 @@
       max-width: 50%;
       line-height: 1.5;
       color: #505050;
+    }
+
+    @media (max-width: 786px) {
+      flex-direction: column;
+      gap: 28px;
+
+      .title,
+      .subtitle {
+        width: 100%;
+        max-width: unset;
+      }
+
     }
 
   }

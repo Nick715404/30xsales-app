@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 
 import LastPost from "@/components/last-post/LastPost"
 import Posts from '@/components/posts/Posts';
+import { IPost } from '@/interfaces/interfaces';
 
 export const metadata: Metadata = {
   title: "30XSales || Блог",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 
 export default async function Blog() {
 
-  const posts = await getAllPosts();
+  const posts: IPost[] = await getAllPosts();
 
   return (
     <div className="blog">

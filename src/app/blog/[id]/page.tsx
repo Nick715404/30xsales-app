@@ -1,24 +1,24 @@
 import styles from './page.module.scss';
 
-import { getCurrentPost } from "@/api/posts/posts";
+import { getSinglePost } from "@/api/posts/posts";
 import { IPost } from '@/interfaces/interfaces';
 
 type Props = {
   params: {
-    slug: string
+    id: string
   }
 }
 
-export async function generateMetadata({ params: { slug } }: Props) {
-  const post: any = await getCurrentPost(slug);
+export async function generateMetadata({ params: { id } }: Props) {
+  const post: IPost = await getSinglePost(id);
   return {
     title: `30XSales || ${post.title}`
   }
 }
 
-export default async function Post({ params: { slug } }: Props) {
+export default async function SinglePost({ params: { id } }: Props) {
 
-  const post: IPost = await getCurrentPost(slug);
+  const post: IPost = await getSinglePost(id);
 
   return (
     <div className={styles.post}>

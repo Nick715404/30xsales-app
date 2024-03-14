@@ -1,6 +1,11 @@
+import { Metadata } from 'next';
 import styles from './not-found.module.scss';
 
 import Button from '@/components/button/Button';
+
+export const metadata: Metadata = {
+  title: "30XSales || Страница не найдена",
+};
 
 export default function PageNotFound() {
   return (

@@ -1,20 +1,21 @@
 export const getAllPosts = async () => {
   try {
-    const responce = await fetch('http://localhost:3100/api/post/all');
-    return responce.json();
+    const response = await fetch('http://localhost:3100/api/post/all');
+    return response.json();
   }
   catch (error) {
     console.log(error);
   }
 }
 
-export const getCurrentPost = async (id: string) => {
+export const getSinglePost = async (id: string) => {
   try {
-    const responce = await fetch(`http://localhost:3100/api/post/${id}`);
-    console.log(responce);
-    return responce.json();
+    const response = await fetch(`http://localhost:3100/api/post/${id}`, {
+      method: 'GET'
+    });
+    return response.json();
   }
   catch (error) {
-    console.log(error);
+    console.log('Ошибка в запросе');
   }
 }

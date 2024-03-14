@@ -11,7 +11,7 @@ export default function Navigation() {
 
   const path = usePathname();
   const Component = handlerClassName(styles);
-  const className = Component(); //
+  const className = Component();
 
   return (
     <nav className={`${className} ${styles.nav}`}>

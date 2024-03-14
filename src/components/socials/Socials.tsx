@@ -11,6 +11,7 @@ import Youtube from '/public/svg/youtube.svg';
 
 import { ISocialsImages } from '@/interfaces/interfaces';
 import { usePathname } from 'next/navigation';
+import { handlerClassName } from '@/utils/class.util';
 
 type Props = {
   mode?: boolean
@@ -26,16 +27,11 @@ export default function Socials({ mode }: Props) {
     youtube: Youtube
   }
 
-  const handleStyleChange = () => {
-    if (pathUrl != '/' && pathUrl != '/contacts' && pathUrl != '/post') {
-      return styles.filtered;
-    } else {
-      return styles.socials
-    }
-  }
+  const Component = handlerClassName(styles);
+  const className = Component();
 
   return (
-    <div className={handleStyleChange()}>
+    <div className={`${className} ${styles.socials}`}>
       <ul className={styles.list}>
         <li className={styles.item}>
           <Link className={styles.link} href={'/'}>

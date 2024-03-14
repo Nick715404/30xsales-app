@@ -91,14 +91,17 @@ export const footerSocials = [
 
 export const tabs = [
   {
+    id: 1,
     text: 'Эффективно управлять продажами',
     img: '/svg/tabs/sales.svg',
   },
   {
+    id: 2,
     text: 'Создавать инновационные бренды одежды  ',
     img: '/svg/tabs/idea.svg',
   },
   {
+    id: 3,
     text: 'Успешно взаимодействовать с маркетплейсами ',
     img: '/svg/tabs/comunity.svg',
   },
@@ -106,6 +109,6 @@ export const tabs = [
 
 export const urlPaths = {
   home: '/',
-  post: '/blog/*',
+  post: '/blog/',
   contacts: '/contacts'
 }
