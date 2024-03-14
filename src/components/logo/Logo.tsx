@@ -25,7 +25,7 @@ export default function Logo({ mode }: Props) {
           src={logoImg}
           alt={alt}
           priority
-          style={mode ? {filter: 'invert(100%)'} : {}}
+          style={mode ? {filter: 'invert(100%)'} : {filter: 'invert(0%)'}}
         />
       </Link>
     </div>

@@ -80,7 +80,7 @@ export default async function Home() {
 
           <section id='home-blog' className={styles.blog}>
             <div className="container">
-              <Posts data={posts} />
+              <Posts title='Блог' filtered data={posts} />
             </div>
           </section>
 

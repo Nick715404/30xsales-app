@@ -15,9 +15,11 @@ type Props = {
 
 export default function LastPost({ data }: Props) {
   const [post, setLastPost] = useState<IPost | undefined>();
+  const [loading, setLoading] = useState('Загружаю данные...');
 
   useEffect(() => {
     setLastPost(() => data && data.pop());
+    setLoading('');
   }, []);
 
   return (
@@ -37,7 +39,7 @@ export default function LastPost({ data }: Props) {
           </div>
         </div>
       ) : (
-        <h1>Упс, кажется что то пошло не так!</h1>
+        <h1>{loading}</h1>
       )}
     </>
   );

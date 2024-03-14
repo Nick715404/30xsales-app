@@ -10,14 +10,16 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="container">
+
         <div className={styles.form}>
           <FooterForm />
         </div>
+
         <div className={styles.nav}>
           <div className="container-small">
             <div className={styles.wrapper}>
               <div className={styles.content}>
-                <Logo />
+                <Logo mode={false} />
                 <div className={styles.socials}>
 
                   <ul className={styles.list}>
@@ -71,12 +73,14 @@ export default function Footer() {
             <img src="/svg/arrow-up.svg" alt="" />
           </Link>
         </div>
+
         <div className={styles.copy}>
           <div className={styles.wrapper}>
             <span className={styles.text}>30XSales © 2024. Все права защищены.</span>
             <Link href='#' className={styles.text}>Политика конфиденциальности</Link>
           </div>
         </div>
+
       </div>
     </footer>
   )
