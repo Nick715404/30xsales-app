@@ -2,8 +2,6 @@
 
 import styles from './LastPost.module.scss';
 
-import { useUnit } from 'effector-react';
-import { $products } from '@/store/products';
 import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
@@ -19,7 +17,7 @@ export default function LastPost({ data }: Props) {
   const [post, setLastPost] = useState<IPost | undefined>();
 
   useEffect(() => {
-    setLastPost(data.pop());
+    setLastPost(() => data && data.pop());
   }, []);
 
   return (
@@ -39,7 +37,7 @@ export default function LastPost({ data }: Props) {
           </div>
         </div>
       ) : (
-        <div>Ooops</div>
+        <h1>Упс, кажется что то пошло не так!</h1>
       )}
     </>
   );

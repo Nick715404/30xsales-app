@@ -53,3 +53,24 @@ export interface ITabs {
   text: string
   img: string
 }
+
+export interface MobileNavProps {
+  openMenu: boolean
+}
+
+export interface ISingleProduct {
+  id: string
+  title: string
+  body: string
+  rating: number
+  link: string
+  thumbnailPath?: string
+  type: string
+}
+
+export interface IReview {
+  id?: string
+  rating: number
+  name: string
+  body: string
+}

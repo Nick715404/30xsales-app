@@ -2,8 +2,6 @@
 
 .btn {
   position: relative;
-  background-color: $dark;
-  color: $white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,11 +21,11 @@
   }
 
   &:hover {
-    background-color: $blue;
+    background-color: $blue !important;
   }
 
   &:active {
-    background-color: $blueActive;
+    background-color: $blueActive !important;
   }
 
   .text {

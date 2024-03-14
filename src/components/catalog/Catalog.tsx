@@ -4,12 +4,16 @@ import Link from 'next/link';
 import Filter from '../filter/Filter';
 import Products from '../products/Products';
 
-export default function Catalog() {
+type Props = {
+  sortMode: boolean
+}
+
+export default function Catalog({ sortMode }: Props) {
   return (
     <div className={styles.catalog}>
       <h2 className={styles.title}>каталог</h2>
       <Filter />
-      <Products />
+      <Products filtered={sortMode} />
     </div>
   )
 }

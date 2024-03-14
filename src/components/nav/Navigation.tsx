@@ -7,7 +7,11 @@ import { navLinks } from '@/constans/constants';
 import { INavLink } from '@/interfaces/interfaces';
 import { usePathname } from 'next/navigation';
 
-export default function Navigation() {
+type Props = {
+  mode?: boolean
+}
+
+export default function Navigation({ mode }: Props) {
 
   const pathName = usePathname();
 

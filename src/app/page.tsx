@@ -9,9 +9,10 @@ import LastPost from '@/components/last-post/LastPost';
 
 import aboutImg from '/public/png/about.png';
 import Posts from '@/components/posts/Posts';
-import { getAllPostsFX } from '@/api/posts/posts';
+import { getAllPosts } from '@/api/posts/posts';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Header from '@/components/header/Header';
 
 export const metadata: Metadata = {
   title: "30XSales || Главная",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
 
-  const posts = await getAllPostsFX();
+  const posts = await getAllPosts();
 
   return (
     <div className='home'>
@@ -31,7 +32,10 @@ export default async function Home() {
               <h1 className={styles.hero__title}>Уверенность <br /> и смелость <br /> - это в вашем стиле </h1>
               <p className={styles.hero__text}>Одежда, которая никогда не подведет и вы будете чувствовать <br /> себя в ней уверенно и комфортно</p>
             </div>
-            <Button text='В каталог' href='/catalog' />
+            <Button
+              style='default'
+              text='В каталог'
+              href='/catalog' />
           </div>
         </div>
       </section>
@@ -45,7 +49,7 @@ export default async function Home() {
                 <h2 className={styles.about__title}>Мы — команда 30XSales</h2>
                 <p className={styles.about__text}>До выхода на wb собстенник работал  в партнёрстве, совместно реализовывали одежду для фитнеса, был создан бренд "smithfit".  После было принято решение выходить самостоятельно  уже на Wildberries, расширять ассортимент стоковых позиций</p>
                 <div className={styles.about__btn_box}>
-                  <Button text='Подробнее о нас' href='/about' />
+                  <Button style='default' text='Подробнее о нас' href='/about' />
                 </div>
               </div>
               <div className={styles.about__img_box}>
@@ -61,7 +65,7 @@ export default async function Home() {
 
         <section id='home-catalog' className={styles.catalog}>
           <div className="container">
-            <Catalog />
+            <Catalog sortMode />
             <Link className={styles.linkCatalog} href={'/catalog'}>в каталог</Link>
           </div>
         </section>

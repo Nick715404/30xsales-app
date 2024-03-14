@@ -1,7 +1,12 @@
-type Props = {}
+import LastPost from "@/components/last-post/LastPost"
 
-export default function Blog({}: Props) {
+export default function Blog() {
   return (
-    <div>Blog</div>
+    <>
+      <div>
+        <LastPost />
+      </div>
+    </>
+
   )
 }

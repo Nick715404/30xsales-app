@@ -12,7 +12,11 @@ import Youtube from '/public/svg/youtube.svg';
 import { ISocialsImages } from '@/interfaces/interfaces';
 import { usePathname } from 'next/navigation';
 
-export default function Socials() {
+type Props = {
+  mode?: boolean
+}
+
+export default function Socials({ mode }: Props) {
 
   const pathUrl = usePathname();
 

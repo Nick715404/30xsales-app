@@ -8,7 +8,7 @@ export default function CatalogPage() {
       <div className={styles.whiteBox}>
         <section className={styles.catalog}>
           <div className="container">
-            <Catalog />
+            <Catalog sortMode={false} />
           </div>
         </section>
       </div>
