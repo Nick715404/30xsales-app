@@ -1,54 +1,63 @@
 'use client'
 
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Banner.module.scss';
 import Button from '../button/Button';
 
 import { IBrand } from '@/interfaces/interfaces';
 import { brands } from '@/constans/constants';
-import { useState } from 'react';
-import Link from 'next/link';
+
+import Enix from '/public/png/enix.png';
+import Equilica from '/public/png/equilica.png';
+import Achivers from '/public/png/achivers.png';
+
+const brandImages = {
+  enix: Enix,
+  equilica: Equilica,
+  achivers: Achivers
+};
+
+type BrandKeys = keyof typeof brandImages;
 
 export default function Banner() {
+  const [hoveredBrand, setHoveredBrand] = useState<BrandKeys>();
 
-  const [brand, setBrand] = useState({
-    brandTitle: '',
-    isHover: false
-  });
-
-  const handleMouseEnter = (id: string) => {
-    setBrand({
-      brandTitle: id,
-      isHover: true
-    });
+  const handleMouseEnter = (id: BrandKeys) => {
+    setHoveredBrand(id);
   };
 
   const handleMouseLeave = () => {
-    setBrand({
-      brandTitle: '',
-      isHover: false
-    });
+    setHoveredBrand(undefined);
   };
 
   return (
-    <div
-      id={brand.isHover ? `${brand.brandTitle}-bg` : `banner`}
-      className={styles.banner}>
+    <div className={styles.banner}>
       {brands.map(({ id, name, description }: IBrand) => (
         <div
           key={id}
           id={id}
-          onMouseEnter={() => handleMouseEnter(id)}
+          onMouseEnter={() => handleMouseEnter(id as BrandKeys)}
           onMouseLeave={handleMouseLeave}
           className={styles.column}
         >
           <h2 className={styles.title}>{name}</h2>
           <p className={styles.text}>{description}</p>
           <div className={styles.btn_box}>
-            <Button text='Подробнее о бренде' href='#' />
+            <Button style='default' text='Подробнее о бренде' href='#' />
           </div>
           <Link className={styles.link} href='#'></Link>
         </div>
       ))}
+      {hoveredBrand && (
+        <Image
+          fill
+          src={brandImages[hoveredBrand]}
+          alt={hoveredBrand}
+          priority
+        />
+      )}
     </div>
   );
 }

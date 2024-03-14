@@ -1,8 +1,9 @@
 'use client'
 
-import Link from "next/link";
 import styles from './Product.module.scss';
 import { IProducts } from '@/interfaces/interfaces';
+import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   product: IProducts

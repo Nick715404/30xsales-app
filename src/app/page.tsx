@@ -53,7 +53,11 @@ export default async function Home() {
                 </div>
               </div>
               <div className={styles.about__img_box}>
-                <Image className={styles.about__img} src={aboutImg} alt='О компании 30XSales' />
+                <Image
+                  className={styles.about__img}
+                  src={aboutImg}
+                  alt='О компании 30XSales'
+                  priority />
               </div>
             </div>
           </div>
