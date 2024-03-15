@@ -30,10 +30,12 @@ export default async function Home() {
               <h1 className={styles.hero__title}>Уверенность <br /> и смелость <br /> - это в вашем стиле </h1>
               <p className={styles.hero__text}>Одежда, которая никогда не подведет и вы будете чувствовать <br /> себя в ней уверенно и комфортно</p>
             </div>
-            <Button
-              style='default'
-              text='В каталог'
-              href='/catalog' />
+            <div className={styles.heroBtnBox}>
+              <Button
+                style='default'
+                text='В каталог'
+                href='/catalog' />
+            </div>
           </div>
         </div>
       </section>

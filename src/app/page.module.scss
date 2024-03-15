@@ -5,7 +5,7 @@
   z-index: 99;
   background-color: $white;
   border-radius: 50px 50px 0 0;
-  margin-top: -4%;
+  margin-top: -45px;
   padding-top: 7%;
 
   @media (max-width: 1024px) {
@@ -51,10 +51,10 @@
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 46%;
-    height: calc((1vw + 1vh) * 39);
+    bottom: 30px;
+    left: -60px;
+    width: 50%;
+    height: calc((1vw + 1vh) * 33);
     background-image: url('/png/hero-girl-left.png');
     background-size: contain;
     background-position: center;
@@ -62,11 +62,9 @@
     max-height: 1018px;
     max-width: 914px;
 
-    @media (max-width: 1480px) {
-      height: calc((1vw + 1vh) * 33);
-      max-height: 818px;
-      max-width: 614px;
-      left: -35px;
+    @media (max-width: 1690px) {
+      height: calc((1vw + 1vh) * 32);
+      left: -45px;
     }
 
     @media (max-width: 1024px) {
@@ -90,10 +88,10 @@
   &::before {
     content: '';
     position: absolute;
-    bottom: -90px;
-    right: 25px;
-    width: 59%;
-    height: calc((1vw + 1vh) * 37);
+    bottom: -107px;
+    right: 38px;
+    width: 50%;
+    height: calc((1vw + 1vh) * 38);
     background-image: url('/png/hero-girl-right.png');
     background-size: cover;
     background-position: center;
@@ -101,7 +99,7 @@
     max-width: 920px;
 
     @media (max-width: 1480px) {
-      max-width: 661px;
+      max-width: 715px;
     }
 
     @media (max-width: 786px) {
@@ -125,7 +123,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-bottom: 9%;
+    padding-bottom: 5.8%;
 
     @media (max-width: 1024px) {
       justify-content: flex-start;
@@ -175,12 +173,16 @@
   }
 
   &__text {
-    margin-bottom: 6.5%;
+    margin-bottom: 7%;
 
     @media (max-width: 1024px) {
       max-width: 423px;
     }
 
+  }
+
+  .heroBtnBox {
+    width: 190px;
   }
 
 }

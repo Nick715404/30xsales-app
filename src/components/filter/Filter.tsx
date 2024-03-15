@@ -12,6 +12,9 @@ export default function Filter({ }: Props) {
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
+  console.log(activeIndex);
+
+
   const handleClick = (index: number) => {
     setActiveIndex(index === activeIndex ? null : index);
   };

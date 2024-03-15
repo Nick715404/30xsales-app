@@ -2,6 +2,11 @@ import Link from 'next/link';
 import styles from './page.module.scss';
 
 import ContactForm from '@/components/form/ContactForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "30XSales || Контакты",
+};
 
 export default function Contacts() {
   return (

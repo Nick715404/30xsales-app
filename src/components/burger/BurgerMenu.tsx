@@ -12,6 +12,7 @@ import Image from 'next/image';
 import Facebook from '/public/svg/facebook-black.svg';
 import Instagramm from '/public/svg/inst.svg';
 import Youtube from '/public/svg/youtube.svg';
+import Logo from '../logo/Logo';
 
 export default function BurgerMenu() {
   const images: ISocialsImages = {
@@ -40,16 +41,25 @@ export default function BurgerMenu() {
     <>
       <div className={handleStyleChange()}>
         <div
-          className={`${styles.burger} ${openMenu ? styles.open : ''}`}
+          className={`${styles.burgerHeader} ${openMenu ? styles.open : ''}`}
           onClick={(): void => setOpenMenu(!openMenu)}>
-          <span className={styles.burger__line}></span>
-          <span className={styles.burger__line}></span>
-          <span className={styles.burger__line}></span>
+          <span className={styles.burgerHeader__line}></span>
+          <span className={styles.burgerHeader__line}></span>
+          <span className={styles.burgerHeader__line}></span>
         </div>
       </div>
       <div
         style={openMenu ? { transform: 'translateY(0%)' } : { transform: 'translateY(-100%)' }}
         className={styles.menu}>
+        <div className={`${styles.burger}`}
+          onClick={(): void => setOpenMenu(!openMenu)}>
+          <span className={styles.burger__line}></span>
+          <span className={styles.burger__line}></span>
+          <span className={styles.burger__line}></span>
+        </div>
+        <div className={styles.logo}>
+          <Logo mode />
+        </div>
         <ul className={styles.list}>
           {navLinks.map(link => {
             const isActive = pathName === link.href;

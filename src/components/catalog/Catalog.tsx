@@ -1,8 +1,8 @@
 import styles from './Catalog.module.scss';
 
-import Link from 'next/link';
 import Filter from '../filter/Filter';
 import Products from '../products/Products';
+import { useState } from 'react';
 
 type Props = {
   sortMode: boolean

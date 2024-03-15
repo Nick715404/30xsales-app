@@ -22,6 +22,7 @@ export default function Logo({ mode }: Props) {
       className={`${styles.logo} ${className}`}>
       <Link className={styles.link} href={'/'}>
         <Image
+          style={mode ? { filter: 'invert(100%)' } : {}}
           className={styles.img}
           src={logoImg}
           alt={alt}
